@@ -1,3 +1,4 @@
+/*
 function sum(num1, num2) {
   return num1 + num 2;
 }
@@ -78,3 +79,28 @@ function oddNumbers(int) {
     console.log("A number BETWEEN 0 and 100, please.");
   }
 }
+
+*/
+//Stretch Challenge (Mike/Bobby)
+
+var challenge = "The quick brown fox jumps over the lazy dog and the sleeping cat early in the day.";
+
+function countIt(astring) {
+  var lowstring = astring.toLowerCase();
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  var output = "";
+  for (var i = 0; i < alphabet.length; i++) {
+    var count = 0;
+    for (var j = 0; j < lowstring.length; j++) {
+      if (alphabet[i] === lowstring[j]) {
+        count++;
+      }
+    }
+    if (count > 0) {
+      output += alphabet[i] + ":" + count + " ";
+    }
+  }
+  console.log(output);
+}
+
+countIt(challenge);
